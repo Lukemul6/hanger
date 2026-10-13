@@ -15,7 +15,7 @@
 <p class="updated">Updated 12 October 2026. Hanger is operated by Luke Mulholland, British Columbia, Canada.</p>
 
 <h2>The short version</h2>
-<p>Your closet lives on your phone. Photos only leave it for the AI features you use (tagging, enhancing, try-on and the stylist), which pass through our server to OpenAI and come straight back. If you sign in with Apple, your closet is also kept in private storage that only your account can open, so it can sync between your devices. Nobody else, including other Hanger users, can see it. No ads, no tracking, and we never sell your data.</p>
+<p>Your closet lives on your phone. Photos only leave it for the AI features you use (tagging, enhancing, try-on and the stylist), which pass through our server to an AI provider (Anthropic or OpenAI) and come straight back. If you sign in with Apple, your closet is also kept in private storage that only your account can open, so it can sync between your devices. Nobody else, including other Hanger users, can see it. No ads, no tracking, and we never sell your data.</p>
 
 <h2>On your phone</h2>
 <ul>
@@ -26,17 +26,17 @@
 </ul>
 
 <h2>Photos sent for the AI features</h2>
-<p>These features send data through our server to OpenAI, which does the work and sends the result back. Our server doesn't keep the photos or the results.</p>
+<p>These features send data through our server to an AI provider, which does the work and sends the result back. Tagging a piece uses Anthropic's Claude, or OpenAI if Claude is unavailable. Everything else uses OpenAI. Our server doesn't keep the photos or the results.</p>
 <ul>
-<li><b>Tagging.</b> When you add a piece, a small copy of its picture is sent to suggest its category, name, colours, season and style, and a brand only if a logo is visible.</li>
+<li><b>Tagging.</b> When you add a piece, a small copy of its picture is sent to suggest its category, name, colours, season and style, and a brand only if a logo is visible. If you add pieces from a photo of yourself wearing an outfit, that photo is sent to OpenAI to find each piece in it.</li>
 <li><b>Enhance.</b> The piece's picture is sent to be redrawn as a clean product photo.</li>
 <li><b>Try-on.</b> Your try-on photo (a photo of you) and the pictures of the outfit's pieces are sent to make an image of you wearing the outfit.</li>
 <li><b>AI stylist</b> (Hanger Plus). A text list of your pieces (such as name, brand, type, colours and seasons) and the weather forecast are sent so it can pick outfits. No photos and no location.</li>
 </ul>
-<p>OpenAI doesn't use data sent through its API to train its models, and keeps it only for a limited time to check for abuse. See <a href="https://openai.com/policies/privacy-policy/">OpenAI's privacy policy</a>.</p>
+<p>Anthropic and OpenAI don't use data sent through their APIs to train their models, and keep it only for a limited time to check for abuse. See <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a> and <a href="https://openai.com/policies/privacy-policy/">OpenAI's privacy policy</a>.</p>
 
 <h2>Weather and location</h2>
-<p>Location is optional. If you allow it, Hanger reads your approximate location and rounds it to about a kilometre, then sends it from your phone directly to <a href="https://open-meteo.com/en/terms">Open-Meteo</a> to get the forecast for Today. It isn't sent to our server or to OpenAI. Without location you can still use everything else.</p>
+<p>Location is optional. If you allow it, Hanger reads your approximate location and rounds it to about a kilometre, then sends it from your phone directly to <a href="https://open-meteo.com/en/terms">Open-Meteo</a> to get the forecast for Today. It isn't sent to our server or to the AI providers. Without location you can still use everything else.</p>
 
 <h2>What we store when you sign in</h2>
 <p>Signing in with Apple is optional and only needed to keep your closet on more than one device. If you sign in, we store:</p>
@@ -57,7 +57,7 @@
 <p>If you send a message with the form on our <a href="support.html#contact">support page</a>, we store the message, the topic you picked and your reply email if you gave one. We use it only to reply and to fix problems. You can ask us to delete your messages at any time.</p>
 
 <h2>Who processes it</h2>
-<p>Supabase hosts our server, database, private storage and sign-in service, on servers that may be outside Canada, including in the United States. OpenAI runs the AI features, in the United States. Open-Meteo provides the weather. Apple provides Sign in with Apple and the App Store. RevenueCat manages subscription status. They process data only to provide those services. We use no analytics, advertising or tracking services, and we don't sell or share your data for advertising.</p>
+<p>Supabase hosts our server, database, private storage and sign-in service, on servers that may be outside Canada, including in the United States. Anthropic and OpenAI run the AI features, on servers outside Canada, mainly in the United States. Open-Meteo provides the weather. Apple provides Sign in with Apple and the App Store. RevenueCat manages subscription status. They process data only to provide those services. We use no analytics, advertising or tracking services, and we don't sell or share your data for advertising.</p>
 
 <h2>Keeping and deleting</h2>
 <p>On your phone: deleting a piece or outfit removes it from the app, and deleting the app removes everything stored on the phone.</p>
